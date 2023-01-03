@@ -46,8 +46,8 @@ jenkins:
       allowsSignup: false
       enableCaptcha: false
       users:
-      - id: "pravin"
-        name: "pravin"
+      - id: "admin"
+        name: "admin"
         properties:
         - blueSteelRedirectOptOutProperty:
             optOut: true
@@ -57,7 +57,7 @@ jenkins:
         - "timezone"
         - "apiToken"
         - mailer:
-            emailAddress: "pravin_g@abc.com"
+            emailAddress: "admin@admin.com"
   slaveAgentPort: 50000
   updateCenter:
     sites:
