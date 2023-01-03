@@ -39,6 +39,40 @@ items:
       allowExceptions: false
   - sharedConfigurationOptOut:
       optOut: false
-- kind: folder
-  name: Teams
-  displayName: Teams
+- kind: managedController
+  name: dotnet-controller
+  configuration:
+    kubernetes:
+      allowExternalAgents: false
+      terminationGracePeriodSeconds: 1200
+      image: CloudBees CI - Managed Controller - 2.375.1.1
+      memory: 2048
+      fsGroup: '1000'
+      cpus: 1.0
+      readinessTimeoutSeconds: 5
+      livenessInitialDelaySeconds: 300
+      readinessInitialDelaySeconds: 30
+      clusterEndpointId: default
+      disk: 3
+      readinessFailureThreshold: 100
+      livenessTimeoutSeconds: 10
+      domain: dotnet-controller
+      livenessPeriodSeconds: 10
+      javaOptions: -XshowSettings:vm -XX:+AlwaysPreTouch -XX:+UseG1GC -XX:+DisableExplicitGC
+        -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -Dhudson.slaves.NodeProvisioner.initialDelay=0
+      yaml: ''
+  description: dotnet-controller
+  displayName: dotnet-controller
+  properties:
+  - configurationAsCode: {}
+  - sharedHeaderLabelOptIn:
+      optIn: true
+  - healthReporting:
+      enabled: true
+  - owner:
+      delay: 5
+      owners: ''
+  - envelopeExtension:
+      allowExceptions: false
+  - sharedConfigurationOptOut:
+      optOut: false
