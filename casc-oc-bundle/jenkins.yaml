@@ -103,7 +103,7 @@ masterprovisioning:
     clusterEndpoints:
     - id: "default"
       ingressClass: "alb"
-      jenkinsUrl: "http://cjoc.cbc.svc.cluster.local/cjoc/"
+      jenkinsUrl: "http://cjoc.cloudbees.svc.cluster.local/cjoc/"
       name: "kubernetes"
     cpus: "1.0"
     disk: 50
