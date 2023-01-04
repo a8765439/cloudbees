@@ -59,7 +59,7 @@ OperationsCenter:
     # OperationsCenter.CasC.ConfigMapName -- the name of the ConfigMap used to configure Operations Center.
     # Note: this property can point to a ConfigMap defined in OperationsCenter.ExtraConfigMaps,
     # or any ConfigMap that exists in the cluster.
-    ConfigMapName: occm
+    ConfigMapName: casc-oc-bundle
 
   # OperationsCenter.Platform -- Enables specific settings depending on the platform
   # platform specific values are: `eks`, `aws`, `gke`, `aks`, `openshift4`
