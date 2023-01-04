@@ -36,11 +36,7 @@ sidecarinjector:
 
 # Operations Center options
 OperationsCenter:
-  # OperationsCenter.Enabled -- Disable for particular use case like setting up namespaces to 
-  
-  
-  
-  masters only
+  # OperationsCenter.Enabled -- Disable for particular use case like setting up namespaces to host masters only
   Enabled: true
 
   # Operations Center docker image
