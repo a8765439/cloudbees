@@ -1,0 +1,125 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: managedController
+  name: Framework
+  configuration:
+    kubernetes:
+      allowExternalAgents: false
+      terminationGracePeriodSeconds: 1200
+      image: CloudBees CI - Managed Controller - 2.375.1.1
+      memory: 2048
+      fsGroup: '1000'
+      cpus: 1.0
+      readinessTimeoutSeconds: 5
+      livenessInitialDelaySeconds: 300
+      readinessInitialDelaySeconds: 30
+      clusterEndpointId: default
+      disk: 2
+      readinessFailureThreshold: 100
+      livenessTimeoutSeconds: 10
+      domain: framework
+      livenessPeriodSeconds: 10
+      javaOptions: -XshowSettings:vm -XX:+AlwaysPreTouch -XX:+UseG1GC -XX:+DisableExplicitGC
+        -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -Dhudson.slaves.NodeProvisioner.initialDelay=0
+      yaml: ''
+  description: ''
+  displayName: Framework
+  properties:
+  - configurationAsCode: {}
+  - sharedHeaderLabelOptIn:
+      optIn: true
+  - healthReporting:
+      enabled: true
+  - owner:
+      delay: 5
+      owners: ''
+  - envelopeExtension:
+      allowExceptions: false
+  - sharedConfigurationOptOut:
+      optOut: false
+- kind: managedController
+  name: maven-controller
+  configuration:
+    kubernetes:
+      allowExternalAgents: false
+      terminationGracePeriodSeconds: 1200
+      image: CloudBees CI - Managed Controller - 2.375.1.1
+      memory: 2048
+      fsGroup: '1000'
+      cpus: 1.0
+      readinessTimeoutSeconds: 5
+      livenessInitialDelaySeconds: 300
+      readinessInitialDelaySeconds: 30
+      clusterEndpointId: default
+      disk: 3
+      readinessFailureThreshold: 100
+      livenessTimeoutSeconds: 10
+      domain: maven-controller
+      livenessPeriodSeconds: 10
+      javaOptions: -XshowSettings:vm -XX:+AlwaysPreTouch -XX:+UseG1GC -XX:+DisableExplicitGC
+        -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -Dhudson.slaves.NodeProvisioner.initialDelay=0
+      yaml: ''
+  description: maven-controller
+  displayName: maven-controller
+  properties:
+  - configurationAsCode: {}
+  - sharedHeaderLabelOptIn:
+      optIn: true
+  - healthReporting:
+      enabled: true
+  - owner:
+      delay: 5
+      owners: ''
+  - envelopeExtension:
+      allowExceptions: false
+  - sharedConfigurationOptOut:
+      optOut: false
+- kind: managedController
+  name: nyl-enterprise
+  configuration:
+    kubernetes:
+      allowExternalAgents: false
+      terminationGracePeriodSeconds: 1200
+      image: CloudBees CI - Managed Controller - 2.375.1.1
+      memory: 2048
+      fsGroup: '1000'
+      cpus: 1.0
+      readinessTimeoutSeconds: 5
+      livenessInitialDelaySeconds: 300
+      readinessInitialDelaySeconds: 30
+      clusterEndpointId: default
+      disk: 3
+      readinessFailureThreshold: 100
+      livenessTimeoutSeconds: 10
+      domain: nyl-enterprise
+      livenessPeriodSeconds: 10
+      javaOptions: -XshowSettings:vm -XX:+AlwaysPreTouch -XX:+UseG1GC -XX:+DisableExplicitGC
+        -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -Dhudson.slaves.NodeProvisioner.initialDelay=0
+      yaml: ''
+  description: nyl-enterprise
+  displayName: nyl-enterprise
+  properties:
+  - configurationAsCode: {}
+  - sharedHeaderLabelOptIn:
+      optIn: true
+  - healthReporting:
+      enabled: true
+  - owner:
+      delay: 5
+      owners: ''
+  - envelopeExtension:
+      allowExceptions: false
+  - sharedConfigurationOptOut:
+      optOut: false
+- kind: folder
+  name: Teams
+  displayName: Teams
+- kind: managedController
+  name: test
+  description: test
+  displayName: test
+  properties:
+  - healthReporting:
+      enabled: true

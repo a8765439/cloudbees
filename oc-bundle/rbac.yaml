@@ -1,0 +1,10 @@
+removeStrategy:
+  rbac: SYNC
+groups:
+- members:
+    users:
+    - pravin
+  roles:
+  - name: mvrole
+    grantedAt: current
+  name: mvgroup
