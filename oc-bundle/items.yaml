@@ -27,7 +27,8 @@ items:
   description: ''
   displayName: Framework
   properties:
-  - configurationAsCode: {}
+  - configurationAsCode:
+      bundle: maven-controll
   - sharedHeaderLabelOptIn:
       optIn: true
   - healthReporting:
