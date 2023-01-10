@@ -225,7 +225,7 @@ unclassified:
   bundleStorageService:
     activated: false
     bundles:
-    - name: "bundle-3"
+    - name: "maven-controll"
       retriever:
         SCM:
           defaultVersion: "main"
