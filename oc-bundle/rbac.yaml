@@ -5,12 +5,25 @@ roles:
   - name: administer
     permissions:
       - hudson.model.Hudson.Administer
+  - name: myrole
+    permissions:
+    - hudson.model.Hudson.Read
+    - hudson.model.Item.Read
+    filterable: "true"
       
 groups:
-- name: mvgroup
+- name: mygroup
   members:
     users:
     - admin
   roles:
   - name: administer
     grantedAt: current
+- name: Browsers
+    roles:
+      - name: myrole
+    members:
+      users:
+        - read
+    
+   
