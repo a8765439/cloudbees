@@ -1,10 +1,16 @@
 removeStrategy:
   rbac: SYNC
+
+roles:
+  - name: administer
+    permissions:
+      - hudson.model.Hudson.Administer
+      
 groups:
-- members:
+- name: mvgroup
+  members:
     users:
-    - pravin
+    - admin
   roles:
-  - name: mvrole
+  - name: administer
     grantedAt: current
-  name: mvgroup
