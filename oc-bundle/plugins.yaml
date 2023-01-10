@@ -128,3 +128,6 @@ plugins:
 - id: workflow-scm-step
 - id: workflow-step-api
 - id: workflow-support
+- id: nectar-rbac
+- id: operations-center-rbac
+- id: role-strategy
