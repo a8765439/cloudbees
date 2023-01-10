@@ -20,10 +20,11 @@ groups:
   - name: administer
     grantedAt: current
 - name: Browsers
-    roles:
-      - name: myrole
-    members:
-      users:
-        - read
+  members:
+    users:
+    - read
+  roles:
+  - name: myrole
+
     
    
