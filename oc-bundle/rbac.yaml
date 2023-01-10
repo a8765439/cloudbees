@@ -2,14 +2,14 @@ removeStrategy:
   rbac: SYNC
 
 roles:
-  - name: administer
-    permissions:
-      - hudson.model.Hudson.Administer
-  - name: myrole
-    permissions:
-    - hudson.model.Hudson.Read
-    - hudson.model.Item.Read
-    filterable: "true"
+- name: administer
+  permissions:
+    - hudson.model.Hudson.Administer
+- name: myrole
+  permissions:
+  - hudson.model.Hudson.Read
+  - hudson.model.Item.Read
+  filterable: "true"
       
 groups:
 - name: mygroup
