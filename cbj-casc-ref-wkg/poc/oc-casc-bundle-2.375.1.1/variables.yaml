@@ -1,0 +1,9 @@
+variables:
+  - namespace: "poc-cbj"
+  - managed_controller_image: "cloudbees/cloudbees-core-mm:2.375.1.1"
+  - jenkins_url: "http://cjoc.poc-cbj.svc.cluster.local/cjoc/"
+  - cjoc_url: "http://dev.cloudbeesjenkins.nylcloud.com/cjoc/"
+  - admin_addresses: "jalaj_kumar@newyorklife.com, lakshminarayana_kosaraju@newyorklife.com"
+  - github_plugin_hook_url: "http://dev.cloudbeesjenkins.nylcloud.com/cjoc/github-webhook/"
+  - master_url_pattern: "http://dev.cloudbeesjenkins.nylcloud.com/*/"
+
